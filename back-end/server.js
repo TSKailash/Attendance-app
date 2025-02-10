@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5000;
-mongoose.connect('mongodb+srv://231001184:saranraj7s@cluster0.a5cja.mongodb.net/vit', {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
