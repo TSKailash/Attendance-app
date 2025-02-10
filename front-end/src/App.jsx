@@ -6,8 +6,9 @@ import SignIn from './components/SignIn';
 const App=()=>{
   return (
     <Routes>
-        <Route path="/" element={<Home />}/>
-        <Route path="/about" element={<About/>}/>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/SignIn-User" element={<SignInUser/>}/>
+        <Route path="SignIn-Admin" element={<SignInAdmin/>}/>
         <Route path="/SignIn" element={<SignIn/>}/>
       </Routes>
   )
