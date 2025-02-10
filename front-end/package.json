@@ -16,11 +16,8 @@
     "postcss-cli": "^11.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
     "recharts": "^2.15.1",
-=======
     "react-router-dom": "^7.1.5",
->>>>>>> b64e76a95b7a680e5223f20c8f361bda4a4b0380
     "tailwindcss": "^4.0.5"
   },
   "devDependencies": {

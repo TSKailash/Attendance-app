@@ -1,19 +1,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
-
 const app = express();
 const PORT = process.env.PORT || 5000;
-
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb+srv://231001184:saranraj7s@cluster0.a5cja.mongodb.net/vit', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.error('MongoDB Connection Error:', err));
-
-// Middleware
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -21,5 +16,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
 });
